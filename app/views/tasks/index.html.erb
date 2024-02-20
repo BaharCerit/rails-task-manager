@@ -1,0 +1,16 @@
+<h1>All tasks</h1>
+
+<div class="box">
+  <ul>
+    <% @tasks.each do |task| %>
+
+      <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+      <label for="myCheckbox"><%=link_to task.title, task_path(task.id)  %></label>
+      <br>
+    <% end %>
+  </ul>
+
+
+  <%= link_to "add task", new_task_path %>
+  <i class="fa-solid fa-cart-plus"></i>
+</div>
