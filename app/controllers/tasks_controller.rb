@@ -36,7 +36,6 @@ class TasksController < ApplicationController
   def destroy
     set_task
     @task.destroy
-    # No need for app/views/tasks/destroy.html.erb
     redirect_to tasks_path, status: :see_other
   end
 
